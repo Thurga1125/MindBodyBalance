@@ -1,0 +1,1267 @@
+/* ============================================
+   MINDBODYBALANCE - REACT CSS STYLESHEET
+   Sri Lankan Women's Health Platform
+   ============================================ */
+
+/* ============================================
+   1. RESET & BASE STYLES
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================
+   2. UTILITY CLASSES
+   ============================================ */
+.gradient-text {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  color: white;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+}
+
+.btn-secondary {
+  background: white;
+  color: #ec4899;
+  border: 2px solid #ec4899;
+}
+
+.btn-secondary:hover {
+  background: #ec4899;
+  color: white;
+}
+
+.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* ============================================
+   3. NAVIGATION COMPONENTS
+   ============================================ */
+.navbar {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.brand-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4b5563;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ec4899;
+  border-bottom-color: #ec4899;
+}
+
+.mobile-menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  padding: 1rem 2rem;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.nav-link.mobile {
+  padding: 0.75rem 0;
+  text-align: left;
+  width: 100%;
+  border-bottom: none;
+  border-radius: 0.5rem;
+}
+
+.nav-link.mobile:hover,
+.nav-link.mobile.active {
+  background: #fdf2f8;
+  color: #ec4899;
+}
+
+/* ============================================
+   4. HERO SECTION
+   ============================================ */
+.hero {
+  background: linear-gradient(135deg, #fdf2f8, #f3e8ff, #e0e7ff);
+  padding: 5rem 0;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Hero Visual Components */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-main-image {
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   5. FEATURES SECTION
+   ============================================ */
+.features {
+  padding: 5rem 0;
+  background: white;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.25rem;
+  color: #6b7280;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-item {
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item.pink {
+  background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+}
+
+.feature-item.purple {
+  background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+}
+
+.feature-item.indigo {
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+}
+
+.feature-item.pink .feature-icon {
+  background: #fce7f3;
+  color: #be185d;
+}
+
+.feature-item.purple .feature-icon {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+.feature-item.indigo .feature-icon {
+  background: #e0e7ff;
+  color: #4f46e5;
+}
+
+.feature-item h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.feature-item p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ============================================
+   6. TESTIMONIALS SECTION
+   ============================================ */
+.testimonials {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #fdf2f8, #f3e8ff);
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 3rem;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.testimonial-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.stars i {
+  color: #fbbf24;
+  font-size: 1.5rem;
+}
+
+.testimonial-card blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #374151;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  margin-top: 1.5rem;
+}
+
+.author-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.author-age {
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #d1d5db;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #ec4899;
+}
+
+/* ============================================
+   7. PAGE LAYOUTS
+   ============================================ */
+.page-header {
+  text-align: center;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #fdf2f8, #f3e8ff);
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+}
+
+.page-header p {
+  font-size: 1.25rem;
+  color: #6b7280;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+/* ============================================
+   8. TOOLS PAGE COMPONENTS
+   ============================================ */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.tool-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.tool-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.tool-header h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.tool-type {
+  background: #fce7f3;
+  color: #be185d;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.tool-card p {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.tool-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.duration {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+/* Mood Tracker Component */
+.mood-tracker {
+  background: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.mood-tracker h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.mood-tracker p {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tracker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.tracker-week {
+  background: linear-gradient(135deg, #fce7f3, #f3e8ff);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.tracker-week h4 {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.mood-emoji {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.tracker-week p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.log-btn {
+  background: none;
+  border: none;
+  color: #ec4899;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Educational Resources */
+.educational-resources {
+  background: linear-gradient(135deg, #fdf2f8, #f3e8ff);
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.educational-resources h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.resource-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.resource-card h4 {
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.resource-card p {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.resource-link {
+  color: #ec4899;
+  font-weight: 500;
+  font-size: 0.875rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ============================================
+   9. PROFESSIONALS PAGE COMPONENTS
+   ============================================ */
+.search-filters {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  align-items: end;
+}
+
+.filter-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.filter-group input,
+.filter-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  outline: none;
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+}
+
+.professionals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.professional-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: auto 2fr 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.professional-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.prof-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doctor-avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.prof-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.prof-header h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.specialty {
+  color: #ec4899;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.rating i {
+  color: #fbbf24;
+}
+
+.rating span {
+  font-weight: 500;
+  color: #374151;
+}
+
+.prof-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.detail i {
+  color: #9ca3af;
+}
+
+.prof-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #059669;
+}
+
+.feature i {
+  color: #059669;
+}
+
+.prof-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Emergency Resources */
+.emergency-resources {
+  background: #fef2f2;
+  border-left: 4px solid #ef4444;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-top: 3rem;
+}
+
+.emergency-resources h3 {
+  color: #991b1b;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.emergency-resources p {
+  color: #7f1d1d;
+  margin-bottom: 0.5rem;
+}
+
+.emergency-resources ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #7f1d1d;
+}
+
+.emergency-resources li {
+  margin-bottom: 0.25rem;
+}
+
+/* ============================================
+   10. ABOUT PAGE COMPONENTS
+   ============================================ */
+.mission-section {
+  background: linear-gradient(135deg, #fdf2f8, #f3e8ff);
+  padding: 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.mission-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+}
+
+.mission-section p {
+  font-size: 1.125rem;
+  color: #374151;
+  line-height: 1.6;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.why-exist {
+  margin-bottom: 3rem;
+}
+
+.why-exist h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.exist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.exist-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border-left: 4px solid;
+}
+
+.exist-card.pink-border {
+  border-left-color: #ec4899;
+}
+
+.exist-card.purple-border {
+  border-left-color: #8b5cf6;
+}
+
+.exist-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.exist-card p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.what-we-offer {
+  margin-bottom: 3rem;
+}
+
+.what-we-offer h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.offer-item {
+  text-align: center;
+}
+
+.offer-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 2rem;
+}
+
+.offer-icon.pink {
+  background: #fce7f3;
+  color: #be185d;
+}
+
+.offer-icon.purple {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+.offer-icon.indigo {
+  background: #e0e7ff;
+  color: #4f46e5;
+}
+
+.offer-item h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.offer-item p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.contact-section {
+  background: #f9fafb;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #ec4899;
+}
+
+.contact-item h4 {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.contact-item p {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* ============================================
+   11. RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .professional-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .prof-photo {
+    order: -1;
+  }
+  
+  .hero-main-image {
+    width: 18rem;
+    height: 18rem;
+  }
+  
+  .feature-grid {
+    gap: 1rem;
+  }
+  
+  .exist-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .testimonial-card {
+    padding: 2rem;
+  }
+  
+  .testimonial-card blockquote {
+    font-size: 1.25rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .nav-container {
+    padding: 1rem 15px;
+  }
+  
+  .hero {
+    padding: 3rem 0;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .hero-main-image {
+    width: 16rem;
+    height: 16rem;
+  }
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tracker-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .search-filters {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .exist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   12. ANIMATIONS & TRANSITIONS
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.hero-main-image {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.feature-card:hover {
+  animation: pulse 0.6s ease-in-out;
+}
+
+/* ============================================
+   13. ACCESSIBILITY IMPROVEMENTS
+   ============================================ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.btn:focus,
+.nav-link:focus {
+  outline: 2px solid #ec4899;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .gradient-text {
+    color: #000;
+    background: none;
+    -webkit-text-fill-color: initial;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .hero-main-image {
+    animation: none;
+  }
+}
+
+/* ============================================
+   14. PRINT STYLES
+   ============================================ */
+@media print {
+  .navbar,
+  .mobile-menu,
+  .btn,
+  .testimonial-dots,
+  .prof-actions {
+    display: none;
+  }
+  
+  .hero {
+    background: white;
+    color: black;
+  }
+  
+  .page-header {
+    background: white;
+  }
+  
+  .hero-text h1,
+  .section-header h2,
+  .page-header h1 {
+    color: black;
+  }
+}
+
+/* ============================================
+   15. CUSTOM SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #be185d, #7c3aed);
+}
+
+/* ============================================
+   16. PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+.hero-main-image,
+.testimonial-avatar,
+.doctor-avatar {
+  will-change: transform;
+}
+
+.feature-card,
+.tool-card,
+.professional-card {
+  contain: layout style paint;
+}
+
+/* ============================================
+   END OF STYLESHEET
+   ============================================ */
